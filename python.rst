@@ -6,7 +6,8 @@ Python
 http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
 
 
-*Method 1*::
+*Method 1*
+::
     x = True
     
     if x:
@@ -15,20 +16,23 @@ http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
         print 'x is not true'
 
 
-*Method 2*::
+*Method 2*
+::
     mark = 40
     is_pass = True if mark >= 50 else False
     print "Pass? " + str(is_pass)
 
 
-*Method 3*::
+*Method 3*
+::
     for i in range(10):
         print i
     else:
         print 'For loop completed the execution'
 
 
-*Method 4*::
+*Method 4*
+::
     for i in range(10):
         print i
         if i == 5:
@@ -37,7 +41,8 @@ http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
         print 'For loop completed the execution'
 
 
-*Method 5*::
+*Method 5*
+::
     a = 0
     loop = 0
     while a <= 10:
@@ -48,4 +53,4 @@ http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
         print "While loop execution completed"
 
 
-~::EOF
+
