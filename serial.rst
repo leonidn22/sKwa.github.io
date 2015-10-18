@@ -2,6 +2,25 @@
 Serial Ports
 ============
 
+
+Terminals
+---------
+
+  - minicom
+  - putty
+  - gtkterm
+  - moserial
+  - cutecom
+
+
+Tools
+-----
+
+  - udev
+  - setserial
+  - stty
+
+
 * Attaching USB-Serial device with custom PID to ttyUSB0 on embedded
   http://unix.stackexchange.com/questions/67936/attaching-usb-serial-device-with-custom-pid-to-ttyusb0-on-embedded
 
