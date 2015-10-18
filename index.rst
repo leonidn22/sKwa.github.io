@@ -1,17 +1,6 @@
-=============
-Documentation
-=============
-
-
-Linux
------
-
-* Анатомия ядра Linux
-  https://www.ibm.com/developerworks/ru/library/l-linux-kernel/
-
-
-Serial ports
-------------
+============
+Serial Ports
+============
 
 * Attaching USB-Serial device with custom PID to ttyUSB0 on embedded
   http://unix.stackexchange.com/questions/67936/attaching-usb-serial-device-with-custom-pid-to-ttyusb0-on-embedded
@@ -49,4 +38,28 @@ Links:
 - http://cisco.opennet.ru/docs/RUS/serial_guide/index.html
 - http://www.cmrr.umn.edu/~strupp/serial.html
 - http://buzzdavidson.com/?p=45
+
+
+
+Drivers:
+
+  * Silicon Labs: cp210x
+  * FDTI        : fdti_sio
+
+
+UDEV 
+~~~~~
+
+Example of rules::
+
+    # cp210x
+    SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", SYMLINK+="sensors/CP210x_%s{serial}", MODE="0666"
+    
+    # ftdi_sio
+    SUBSYSTEMS=="usb", KERNEL=="ttyUSB[0-9]*", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="sensors/ftdi_%s{serial}"  MODE="0666"
+    
+    # PowerSupply1
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ec00",  RUN+="/sbin/modprobe cp210x"
+    SUBSYSTEMS=="drivers", ENV{DEVPATH}=="/bus/usb-serial/drivers/cp210x", ATTR{new_id}="10c4 ec00"
+    SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ec00",  SYMLINK+="crow/pps1", GROUP="users", MODE="0666"
 
