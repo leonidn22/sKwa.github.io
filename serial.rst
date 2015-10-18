@@ -47,6 +47,40 @@ Drivers:
   * FDTI        : fdti_sio
 
 
+Command line
+~~~~~~~~~~~~
+::
+
+    (root)%> udevadm info -a -n /dev/ttyUSB0
+    (root)%> udevadm monitor --env
+    (root)%> udevadm info -a -p $(udevadm info -q path -n /dev/ttyUSB0)
+
+
+Determine device
+~~~~~~~~~~~~~~~~
+::
+
+    $ lsusb
+    Bus 002 Device 003: ID 0cf3:e004 Atheros Communications, Inc.
+    Bus 002 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+    Bus 002 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    Bus 001 Device 003: ID 0c45:644f Microdia
+    Bus 001 Device 002: ID 8087:0024 Intel Corp. Integrated Rate Matching Hub
+    Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    Bus 004 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+    Bus 003 Device 002: ID 10c4:ec04 Cygnal Integrated Products, Inc.
+    Bus 003 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+    
+    #
+    # Bus 003 Device 002: ID 10c4:ec04 Cygnal Integrated Products, Inc.
+    #
+    # ID = "10c4:ec04"
+    #
+    # Silicon Labs CP210x UART Bridge: ID = 10c4:ea60
+    
+    $ echo "10c4 ec04" > /sys/bus/usb-serial/drivers/cp210x/new_id
+
+
 UDEV 
 ~~~~~
 
