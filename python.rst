@@ -3,6 +3,11 @@ Python
 ======
 
 
+Books
+-----
+http://wombat.org.ua/AByteOfPython/toc.html
+
+
 Python Project the Right Way
 ----------------------------
 - https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
