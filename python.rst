@@ -2,6 +2,13 @@
 Python
 ======
 
+
+Python Project the Right Way
+----------------------------
+- https://www.jeffknupp.com/blog/2013/08/16/open-sourcing-a-python-project-the-right-way/
+- http://www.pydanny.com/cookie-project-templates-made-easy.html
+
+
 EAFP
 ----
 
@@ -68,5 +75,27 @@ http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
     else:
         print "While loop execution completed"
 
+
+
+A non-magical introduction to Pip and Virtualenv for Python beginners
+http://www.dabapps.com/blog/introduction-to-pip-and-virtualenv-python/
+
+Virtualenv, Virtualenvwrapper and Pip - A python newbie's best friends 
+http://2buntu.com/articles/1450/virtualenv-virtualenvwrapper-and-pip-a-python-newbies-best-friends/
+
+Python Web-based Serial Console using WebSockets
+http://fabacademy.org/archives/2015/doc/WebSocketConsole.html
+
+Adding Non-Code Files
+http://python-packaging.readthedocs.org/en/latest/non-code-files.html
+
+Packaging and Distributing Projects
+https://packaging.python.org/en/latest/distributing/
+
+Building and Distributing Packages with Setuptools
+https://pythonhosted.org/setuptools/setuptools.html
+
+A Brief Introduction to Packaging Python
+http://www.ewencp.org/blog/a-brief-introduction-to-packaging-python/
 
 
