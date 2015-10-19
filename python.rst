@@ -2,7 +2,23 @@
 Python
 ======
 
+EAFP
+----
+
+http://programmers.stackexchange.com/questions/175655/python-forgiveness-vs-permission-and-duck-typing
+
+Easier to ask for forgiveness than permission. This common Python coding style
+assumes the existence of valid keys or attributes and catches exceptions if the
+assumption proves false. This clean and fast style is characterized by the 
+presence of many try and except statements. The technique contrasts with the 
+LBYL style common to many other languages such as C.
+
+
+
+
 5 different methods to use an else block in python
+--------------------------------------------------
+
 http://www.idiotinside.com/2015/10/18/5-methods-to-use-else-block-in-python/
 
 
