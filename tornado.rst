@@ -4,7 +4,7 @@
 
 The Tornado Web framework makes it easy to write RESTful APIs in Python. How easy? Have a look
 
-С Торнадо очен' легко создават' RESTfull API на Питоне. Как легко? Сам посмотри как легко.
+Торнадо Веб Фреймворк позволит вам очен' легко создават' RESTfull API на Питоне. Как легко? Сам посмотри как легко.
 
 ---
 
