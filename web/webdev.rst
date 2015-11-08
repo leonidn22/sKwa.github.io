@@ -18,9 +18,18 @@ main resource: http://www.w3schools.com/
     - Certifications
 
 
+Certification
+-------------
+    - bootstrap
+
+
 HTML
 ----
-  - http://learn.shayhowe.com/html-css/
+    - http://learn.shayhowe.com/html-css/
+
+Layouts
+~~~~~~~
+    - http://www.tutorialspoint.com/javascript/
 
 CSS
 ---
@@ -33,4 +42,5 @@ CSS
 
 JavaScript
 ----------
-  - http://www.w3schools.com/js/
+    - http://www.w3schools.com/js/
+    - http://www.tutorialspoint.com/javascript/
