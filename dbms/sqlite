@@ -1,0 +1,6 @@
+Timestamp:
+~~~~~~~~~~
+
+sqlite> select strftime("%Y-%m-%d %H:%M:%f", "now", "localtime"); 
+2013-05-08 15:59:29.238
+

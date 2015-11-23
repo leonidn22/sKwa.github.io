@@ -1,0 +1,15 @@
+    http://www.oracle.com/technetwork/java/javase/downloads/index.html
+    
+    mkdir -p /usr/lib/jvm
+
+    tar zxvf jdk-7u13-linux-x64.tar.gz -C /usr/lib/jvm
+
+    mv ./jdk1.7.0_13 /usr/lib/jvm/ 
+
+    ln -s /usr/lib/jvm/jdk1.7.0_* /usr/lib/jvm/jdk7 
+
+    sudo update-alternatives --install "/usr/bin/java"    "java"    "/usr/lib/jvm/jdk7/bin/java"    1
+    sudo update-alternatives --install "/usr/bin/javac"   "javac"   "/usr/lib/jvm/jdk7/bin/javac"   1
+    sudo update-alternatives --install "/usr/bin/javaws"  "javaws"  "/usr/lib/jvm/jdk7/bin/javaws"  1
+   
+sudo update-alternatives --config java

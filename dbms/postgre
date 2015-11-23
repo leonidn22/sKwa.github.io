@@ -1,0 +1,28 @@
+Post instal
+~~~~~~~~~~~
+
+1. init cluster/server:
+
+  # service postgresql initdb
+
+
+2. start service:
+
+  # service postgresql start
+
+
+3. change user
+
+  # su - postgres
+
+
+4. connect
+
+  $ psql -d template1 -U postgres
+
+-------------------
+
+# create database
+
+  $ createdb <name>
+

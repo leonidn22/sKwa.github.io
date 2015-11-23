@@ -1,0 +1,5 @@
+date +'%a %h %d %H:00:00'
+
+date --date='1 HOUR AGO' +'%a %h %d %H:00:00'
+
+date +'%a %h %d %H:00:00' --date='1 HOUR AGO'

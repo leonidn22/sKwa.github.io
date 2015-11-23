@@ -6,6 +6,9 @@ WEB Development
 main resource: http://www.w3schools.com/
 
 
+
+
+
 **Topics**:
 
     - HTML
@@ -17,6 +20,43 @@ main resource: http://www.w3schools.com/
     - XML
     - Certifications
 
+  - Tutorials
+  - Libraries & Frameworks
+  - History of the browser user-agent string
+  - Web Scraping
+
+Most Popular Libraries
+----------------------
+http://jster.net/category/ui-frameworks
+
+    - JQuery
+    - Prototype
+    - MooTools
+
+UI libs
+~~~~~~~
+    - Kendo UI (http://www.telerik.com/campaigns/kendo-ui/free-trial-4?gclid=CjwKEAiA7MWyBRDpi5TFqqmm6hMSJAD6GLeA7A-rkcWu0JZhG9V0tfOLc9OqJGP3Ey60RVFzsY9cJRoCk2_w_wcB)
+    - WebIx UI (http://webix.com/)
+    - Metro UI 
+
+    - Backbone.js
+    - Knockout.js
+    - Ember.js
+    - React.js
+    - MEAN (software bundle)
+
+Backbone.js - впечетляет список приложений.
+
+Frameworks
+----------
+    - Twitter Bootstrap
+    - Foundation
+    - AngularJS
+    - Cappuccino
+    - ExtJS
+    - Google Web Toolkit
+    - Meteor
+    - 
 
 Certification
 -------------
@@ -44,3 +84,20 @@ JavaScript
 ----------
     - http://www.w3schools.com/js/
     - http://www.tutorialspoint.com/javascript/
+
+
+Web Scraping
+------------
+http://www.datadrivenjournalism.ru/2015/03/scraping/
+
+web сущ. —сеть жен. паутина жен.
+scraping сущ. —выскабливание сред.
+
+Веб-Скрейпинг — это технология получения данных из веб-страниц.
+К сожалению, пока что в русскоязычной Википедии нет страниц, посвященных скрейпингу.
+
+History of the browser user-agent string
+----------------------------------------
+http://webaim.org/blog/user-agent-string-history/
+https://udger.com/
+https://github.com/hamaxx/uasparser2/

@@ -1,0 +1,7 @@
+ip l
+
+ifup eth0
+
+qemu-kvm python-virtinst virt-manager virt-top virt-viewr libvirt libvirt-client 
+
+chcon --reference /var/.../libvirt/images /home/qemu/img

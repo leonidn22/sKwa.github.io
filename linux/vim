@@ -1,0 +1,5 @@
+# show non-terminal
+:set list
+:set nolist
+
+

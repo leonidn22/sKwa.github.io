@@ -1,0 +1,27 @@
+
+http://www.cyberciti.biz/faq/linux-configuring-ip-traffic-accounting/
+
+iptables -A INPUT -p tcp --dport 25 -j ACCEPT
+iptables -A INPUT -p tcp --dport 25 -j DROP
+
+/etc/init.d/iptables save
+/etc/init.d/iptables restart
+
+
+  * Ubuntu: service ufw [start,stop,restart]
+  * SUSE  :
+  * CentOS: service iptables [start,stop,restart]
+  * RHEL  : service iptables [start,stop,restart]
+  * Fedora: service iptables [start,stop,restart]
+
+
+  Displaying the Status: 
+
+    #> iptables -L -n -v --line-numbers
+
+   Access to web server on port 80:
+
+    #> iptables -I INPUT -p tcp -s 178.13.132.12 --dport 80 -j ACCEPT
+    #> iptables -I INPUT -p tcp -s 192.168.1.0/24 --dport 80 -j ACCEPT
+
+

@@ -1,0 +1,201 @@
+Newbie: ftp
+Date: 16-Jan-00
+Author: cogNiTioN <cognition@attrition.org <mailto: cognition@attrition.org>> 
+
+ftp: 
+
+*What is ftp?*
+	
+*ftp* is a program that allows you to exchange files between your machine, and 
+a remote one. You can upload files (send them from your machine to the remote
+one), or you can download files (your machine receives them from the remote 
+one). FTP is also the name of the protocol the program uses to transfer the 
+files (File Transfer Protocol), but in this document, ftp will refer to the 
+program. 
+
+Note: There is more than one ftp program (or client), so this file refers to
+the command line utility found on most unix/linux systems. The MS-DOS ftp
+program will probably be very similar, and even the basics will be applicable
+to most GUI (Graphical User Interface) ftp clients. Modern web browsers, and
+even some not so modern ones, are able to download files from ftp sites.
+  
+*Why use ftp?*
+
+*ftp* can be used to upload/download any files to any machine running an ftp 
+server (or daemon), and on which you have a valid login account, or the server 
+has a anonymous account anyone can use. e.g. lots of web sites allow you to 
+upload your page with *ftp*, and lots of programs/files (including many 
+distributions of Linux) are available from ftp sites which have anonymous 
+accounts. Anonymous accounts are accounts that anyone can use, instead of
+entering your user name when prompted, to make use of an anonymous account,
+you use the name 'anonymous', and normally you get asked to use your email
+address as the account password. Normally an anonymous accout has limited 
+privilages, meaning an anonymous user can only access certain parts of the 
+site and more often than not, can only download files; they wouldn't be able 
+to upload them.
+
+While *ftp* used to be almost exclusively used for uploading files, it is now
+losing ground to *scp*, which uses ssh to transfer the files, and is 
+thus infinitely more secure. The use of *scp* is beyond the scope of this file,
+but there are plans for a file on *scp*.
+
+*Using ftp:*
+
+As with most Un*x programs, there is more than one way to connect to a remote
+ftp site. One way is to start *ftp* and specify the remote machine (or server) on
+the command line. Another way is to start *ftp*, and then use the *open* command
+inside *ftp* to open a connection.
+
+Note: Once *ftp* is running, it has it's own special prompt, just like a unix
+shell. This prompt will normally look like this '/ftp>/'.
+
+(Please note: A fictional ftp site has been used for security reasons)
+
+*cog@pingu:/usr/cog $ ftp ftp.attrition.org
+Connected to forced.attrition.org.
+220 ProFTPD 1.2.0pre3a Server (forced proftpd service) [forced.attrition.org]
+Name (ftp.attrition.org:cog): cog
+331 Password required for cog.
+Password:
+230 User cog logged in.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp>*
+
+or:
+
+*cog@pingu:/usr/cog $ ftp
+ftp> open ftp.attrition.org
+Connected to forced.attrition.org.
+220 ProFTPD 1.2.0pre3a Server (forced proftpd service) [forced.attrition.org]
+Name (ftp.attrition.org:cog): cog
+331 Password required for cog.
+Password:
+230 User cog logged in.
+ftp>*
+
+Now you're connected to your ftp site, you need to know how to transfer 
+files to (download) and from (upload) your machine to the ftp server.
+
+To upload files from your machine to the server you can use the *put* and 
+*mput* commands.
+
+*put* /local-file [remote-file]/ 
+	Store a local file on the remote machine. If /remote-file/ is 
+	left unspecified, the local file name is used.
+	[*send* can also be used, and is a synonym for *put*]
+
+*mput* /[local-files]/
+	Expand wildcards in /local-files/ given as arguments and do a 
+	*put* for each file.
+
+e.g.:*
+ftp> put ftp.file.html
+local: ftp.file.html remote: ftp.file.html
+200 PORT command successful.
+150 Opening BINARY mode data connection for ftp.file.html
+226 Transfer complete
+ftp> put ftp.file.html ftp.html
+local: ftp.file.html remote: ftp.html
+200 PORT command successful.
+150 Opening BINARY mode data connection for ftp.html
+226 Transfer complete
+ftp> mput */index.*
+mput news/index? y
+200 PORT command successful.
+150 Opening BINARY mode data connection for news/index.
+226 Transfer complete.
+442 bytes sent in 0.0835 secs (5.2 Kbytes/sec)
+mput news/index.html? y
+200 PORT command successful.
+150 Opening BINARY mode data connection for news/index.html.
+226 Transfer complete.
+1377 bytes sent in 0.256 secs (5.3 Kbytes/sec)
+mput news/index.old.shtml? n
+mput linux/index? y
+200 PORT command successful.
+150 Opening BINARY mode data connection for linux/index.
+226 Transfer complete.
+1192 bytes sent in 0.156 secs (7.5 Kbytes/sec)
+mput linux/index.html? y
+200 PORT command successful.
+150 Opening BINARY mode data connection for linux/index.html.
+226 Transfer complete.
+ftp>*
+
+As the above example shows, when using *mput*, *ftp* normally asks you before 
+transferring the files. If you're transferring lots of files, this can get 
+very tedious, and is time consuming, so I like to start *ftp* with the *-i* 
+flag. This turns off interactive prompting and transfers the files without
+asking you. Once at the /ftp>/ prompt, if you type *prompt*, you can 
+toggle the status of interactive mode.
+
+If, as in the above example, you are transferring files to any directory other
+than the current working directory (which can be found using the *pwd* 
+command), then you need to make sure the directory you're transferring files 
+to already exists, because *ftp* will not automatically create it for you.
+
+To create directories you can use the *mkdir* command just as you would in a
+normal Un*x shell.
+
+e.g.:
+*
+ftp> mkdir /test
+257 "/test" - directory successfully created.
+*
+
+Now, to download a file from the remote server to your computer you first 
+need to locate the file you want to download. One command you may use to do 
+this is *ls*, which works the same as the unix version of *ls*, except 
+the output is in the format of *ls -l*. *dir* can also be used, as 
+can *mdir*. *dir* is a synonym for *ls*, and *mdir* is the same as *dir*,
+except that multiples files can be specified with *mdir*.
+
+If you need to move around directories on the remote machine you can use
+the command *cd*.
+
+Once you've located the file to download, there are several ways you can get
+the file; *get*, *mget*, *reget*, *recv* and *newer*.
+
+*get* /remote-file [local-file]/
+	Retrieve the remote file and store it on the local machine. If the
+	local filename is not specified, it is given the same name as it has
+	on the remote machine. 
+
+*mget* is rather like *mput*; it is the same as *get*, except that 
+wildcards are expanded with *mget*.
+
+*reget* also works the same as *get*, except if the local file already
+exists, and the local file is smaller, it assumes that the local file is a
+partial download of the remote file and continues the download from the end 
+of local file. This is good if the transfer is dropped half way through.
+
+*newer* is again, the same as *get*, except the remote file is only got if
+it is newer than the already existing local file. This is useful for seeing if
+a particular package/file has been updated, and then downloading it if it has.
+
+
+*Advanced Usage of ftp:*
+
+*ftp* has quite a few 'advanced' functions, which include the ability to 
+define macros (strings of commands which can be called from just one command),
+automatic login (with automatic execution of a macro), file name mapping and
+character translation (in filenames). These are all detailed in the man page,
+and I will leave them as an exercise for the reader. 
+
+------------------------------------------------------------------------
+*More information:*
+
+	Man pages: *ftp*
+		   *scp*
+
+	Books: *_Linux in a Nutshell_* (O'Reilly ISBN 1-56592-167-4)
+	         available on amazon.com, here <http://www.amazon.com/exec/obidos/ISBN=1565925858/insekurityorgA/103-3353115-6577411>.
+
+Any feedback on this file should be directed at me, via an email to:
+<cognition@attrition.org <mailto:cognition@attrition.org>>
+
+------------------------------------------------------------------------
+cogNiTioN <cognition@attrition.org <mailto:cognition@attrition.org>>
+Copyright 1999 cogNiTioN
+

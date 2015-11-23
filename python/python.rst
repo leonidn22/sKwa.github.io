@@ -2,6 +2,19 @@
 Python
 ======
 
+OnLine IDE
+http://code.runnable.com/
+
+Beginner’s guide to Web Scraping in Python (using BeautifulSoup)
+http://www.analyticsvidhya.com/blog/2015/10/beginner-guide-web-scraping-beautiful-soup-python/?utm_content=buffer65241&utm_medium=social&utm_source=plus.google.com&utm_campaign=buffer
+
+WSGI
+https://en.wikipedia.org/wiki/Web_Server_Gateway_Interface
+http://wsgi.tutorial.codepoint.net/
+https://www.python.org/dev/peps/pep-0333/
+http://docs.repoze.org/moonshining/pep333.html
+http://blog.dscpl.com.au/2009/09/roadmap-for-python-wsgi-specification.html
+
 
 Books
 -----

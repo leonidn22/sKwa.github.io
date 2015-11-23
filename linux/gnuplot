@@ -1,0 +1,8 @@
+Convert the gnuplot script into a shell script
+
+#!/bin/sh
+    gnuplot << EOF
+    set terminal postscript eps
+    set output "$1.exp"
+    plot "$1.dat"
+EOF
