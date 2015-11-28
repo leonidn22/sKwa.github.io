@@ -147,3 +147,6 @@ Example of rules::
     SUBSYSTEMS=="drivers", ENV{DEVPATH}=="/bus/usb-serial/drivers/cp210x", ATTR{new_id}="10c4 ec00"
     SUBSYSTEMS=="usb", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ec00",  SYMLINK+="crow/pps1", GROUP="users", MODE="0666"
 
+
+https://pyserial.readthedocs.org/en/latest/pyserial_api.html
+

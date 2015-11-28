@@ -25,6 +25,15 @@ Other helpful links:
 reStructuredText documentation
 ==============================
 
+Primer
+------
+  - Sphinx Primer http://sphinx-doc.org/rest.html
+  - Primer http://docutils.sourceforge.net/docs/user/rst/quickstart.html
+  - Quick Reference http://docutils.sourceforge.net/docs/user/rst/quickref.html
+  - Specification http://docutils.sourceforge.net/docs/ref/rst/restructuredtext.html
+
+ReST
+----
     * reStructuredText home page
         http://docutils.sourceforge.net/rst.html
     * reStructuredText quick reference
@@ -34,6 +43,35 @@ reStructuredText documentation
     * reStructuredText directives
         http://docutils.sourceforge.net/docs/ref/rst/directives.html
       
+Videos
+------
+    - How to create documentation with sphinx (25:48)
+      https://www.youtube.com/watch?v=ouHVkMo3gwE
+
+    - Documenting Your Project in Sphinx (2:21:05)
+      https://www.youtube.com/watch?v=QNHM7q2hLh8
+
+    - Sphinx & Read the Docs
+      https://www.youtube.com/watch?v=oJsUvBQyHBs
+
+    - Generating Dash Doctests from Sphinx Documentation (3:53)
+      https://www.youtube.com/watch?v=_B6drt8JEH4
+
+    - Writing multi-language documentation using Sphinx (24:45)
+      https://www.youtube.com/watch?v=Nz8zutA55fI
+
+    - Sphinx autodoc: automated API documentation (36:27)
+      https://www.youtube.com/watch?v=mdtxHjH2wog
+
+    - Introduction to Sphinx documentation generator (28:28)
+      https://www.youtube.com/watch?v=10lOvz5MAq8
+
+    - Documenting Your Project With Sphinx (2:11:28)
+      https://www.youtube.com/watch?v=L-fXOoxrt0M
+
+    - Using Sphinx to Document Python Code (9:17)
+      https://www.youtube.com/watch?v=LQ6pFgQXQ0Q
+
 
 Links
 =====
