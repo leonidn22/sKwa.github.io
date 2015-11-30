@@ -2,6 +2,10 @@
 .swo
 .swp
 .sw[op]~
+*/*.sw[op]
+*/*.sw[op]~
+./*/*.sw[op]
+./*/*.sw[op]~
 
 #### virtualenv ####
 bin/
