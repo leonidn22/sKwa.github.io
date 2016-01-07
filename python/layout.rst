@@ -1,27 +1,7 @@
-========================
 Python project structure
 ========================
 
-
-
-- :emphasis:`emphasis`
-- :literal:`literal`
-- :code:`code`
-- :math:`E_org = mc^2`
-- :math:`H_2O`
-- H\ :sub:`2`\ O
-- 2\ :sup:`3`\ = 8
-- :strong:`strong`
-- See :PEP:`287` for more information.
-- See :RFC:`2822` for information about email headers.
-- hello :title-reference:`XXX\ *foo*\ **bar**`
-
-
 .. contents::
-
-
-:title-reference:`hello`
-Lorem ist ipsum. Image is a strong picture.
 
 
 Minimal
@@ -44,11 +24,10 @@ Basic
         proj/
             __init__.py
             code.py
-        setup.py
+        setup.py            # setuptools
         README.rst
-        MANIFEST.in
 
-Это базовая и рекомендуемая структура проекта.
+Это базовая и рекомендуемая структура проекта. Так как 
 
 
 Sphinx
@@ -127,13 +106,3 @@ Git
         .git/
         .gitignore
 
-
-env vcs tst doc 
- 0   0   0   0  | V
- 0   1   0   0  | V
- 0   1   1   0  | V
- 0   1   1   1  | V
- 1   1   0   0  | X
-
-:title-reference:foo bar
-egg spamm

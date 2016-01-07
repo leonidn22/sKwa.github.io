@@ -1,6 +1,44 @@
 Algorithms
 ==========
 
+
+Graphs and Trees
+----------------
+
+Binary Tree Class::
+
+    class Node(object):
+        def __init__(self, left, right):
+            self.left = left
+            self.right = right
+
+Multiway Tree Class::
+
+   class Node(object):
+        def __init__(self, kids, next=None)
+            self.kids = kids
+            self.next = next
+
+The Bunch PATTERN::
+
+    class Bunch(object):
+        def __init__(self, *args, **kwargs):
+            super(Bunch, self).__init__(*args, **kwargs)
+            self.__dict__ = self
+ 
+Counting
+~~~~~~~~
+::
+
+    >>> S, x = range(1, 67), 13
+    >>> x * sum(S) == sum((x * y) for y in S)
+    True
+
+Recursion and Reduction
+~~~~~~~~~~~~~~~~~~~~~~~
+...
+
+
   - http://interactivepython.org/courselib/static/pythonds/index.html
   - https://www.quora.com/Whats-a-good-algorithms-book-with-examples-in-Python
   - http://legacy.python.org/workshops/2002-02/papers/15/index.htm
