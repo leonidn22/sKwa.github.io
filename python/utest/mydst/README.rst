@@ -23,8 +23,8 @@ Layout
 ::
     mydst/
     ├── mypkg
-    │   ├── code.py
-    │   └── __init__.py
+    │   ├── __init__.py
+    │   └── code.py
     ├── tests
     │   ├── __init__.py
     │   └── test_code.py
@@ -66,7 +66,7 @@ Run::
 
     (mydst)$ python -m unittest discover
 
-verbose::
+verbose(1)::
 
     $ python -m unittest -v tests.test_code
     test_foo (tests.test_code.TestStringMethods) ... ok
@@ -76,7 +76,28 @@ verbose::
     
     OK
 
+verbose(2)::
+    $ python -m unittest discover -v
+    test_foo (tests.test_code.TestStringMethods) ... ok
+    
+    ----------------------------------------------------------------------
+    Ran 1 test in 0.000s
+    
+    OK
+
+
+PyTest
+------
+https://pytest.org/latest/goodpractises.html
+
 
 ---
 https://docs.python.org/2/tutorial/modules.html
 http://stackoverflow.com/questions/1896918/running-unittest-with-typical-test-directory-structure
+http://docs.python-guide.org/en/latest/writing/structure/
+http://mikegrouchy.com/blog/2012/05/be-pythonic-__init__py.html
+http://www.learnpython.org/en/Modules_and_Packages
+
+https://python-packaging.readthedocs.org/en/latest/
+http://python-packaging-user-guide.readthedocs.org/en/latest/distributing/
+http://infinitemonkeycorps.net/docs/pph/
