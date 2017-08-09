@@ -19,6 +19,10 @@ Other docs
   • http://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
   • https://packaging.python.org/en/latest/distributing/
   • http://www.ewencp.org/blog/a-brief-introduction-to-packaging-python/
+  • https://mail.python.org/pipermail/python-list/2013-November/661175.html
+  • https://blog.ionelmc.ro/2014/05/25/python-packaging/
+  • https://docs.pytest.org/en/latest/goodpractices.html
+  • https://blog.ionelmc.ro/2014/06/25/python-packaging-pitfalls/
 
 
 
